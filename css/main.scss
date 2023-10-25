@@ -19,20 +19,22 @@ $color-light-grey: #E2E2E2;
 // Fonts
 $font-title: 'Shrikhand', serif;
 $font-text: 'Roboto', sans-serif;
-$font-size-title: 1.75rem;
-$font-size-subtitle: 1.5rem;
-$font-size-big: 1.125rem;
-$font-size-normal: 1rem;
-$font-size-small: 0.94rem;
+$font-size-28: 1.75rem; // 28px
+$font-size-24: 1.5rem; // 24px
+$font-size-18: 1.125rem; // 18px
+$font-size-17: 1.063rem; // 17px
+$font-size-16: 1rem; // 16px
+$font-size-15: 0.938rem; //15px
 
 /* **************************** */
-/*     Réinit. + Réglages       */
+/*     Réinit. + balise         */
 /* **************************** */
 *{
     margin: 0;
     padding: 0;
     font-family: $font-text;
 }
+
 
 /* **************************** */
 /*         Génériques           */
@@ -41,11 +43,27 @@ $font-size-small: 0.94rem;
     opacity: 0;
 }
 
+.btn{
+    height: 3.125rem;
+    padding: 0.813rem 1.172rem;
+    background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    font-weight: 500;
+    color: white;
+    word-wrap: break-word;
+    border: none;
+    &:hover{
+        background: linear-gradient(0deg, #9c6bd8 0%, #ff95e1 100%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
 /* **************************** */
 /*       Contenu mobile         */
 /* **************************** */
 .header{
-    height: 113px;
     &__container__top{
         display: flex;
         align-items: center;
@@ -74,4 +92,25 @@ $font-size-small: 0.94rem;
     }
 }
 
-    
+.section__container__cta{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.688rem;
+    &__hook{
+        width: 70%;
+        font-size: $font-size-24;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 1.688rem;
+    }
+    &__promess{
+        font-size: $font-size-18;
+        font-weight: 300;
+        text-align: center;
+    }
+    &__btn{
+
+    }
+}

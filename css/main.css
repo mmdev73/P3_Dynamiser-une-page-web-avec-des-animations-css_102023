@@ -7,7 +7,7 @@
 /*          Variables           */
 /* **************************** */
 /* **************************** */
-/*     Réinit. + Réglages       */
+/*     Réinit. + balise         */
 /* **************************** */
 * {
   margin: 0;
@@ -22,12 +22,25 @@
   opacity: 0;
 }
 
+.btn {
+  height: 3.125rem;
+  padding: 0.813rem 1.172rem;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  font-weight: 500;
+  color: white;
+  word-wrap: break-word;
+  border: none;
+}
+.btn:hover {
+  background: linear-gradient(0deg, #9c6bd8 0%, #ff95e1 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
 /* **************************** */
 /*       Contenu mobile         */
 /* **************************** */
-.header {
-  height: 113px;
-}
 .header__container__top {
   display: flex;
   align-items: center;
@@ -52,4 +65,24 @@
   gap: 1.063rem;
   background-color: #E2E2E2;
   color: #353535;
+}
+
+.section__container__cta {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.688rem;
+}
+.section__container__cta__hook {
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1.688rem;
+}
+.section__container__cta__promess {
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
