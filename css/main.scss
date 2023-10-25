@@ -1,0 +1,77 @@
+/* **************************** */
+/*          Imports             */
+/* **************************** */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+/* **************************** */
+/*          Variables           */
+/* **************************** */
+// Couleurs
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99E2D0;
+$color-white: #F3F3F3;
+$color-green-font: #008766;
+$color-blue: #89C8FA;
+$color-dark-blue: #003A68;
+$color-grey: #353535;
+$color-light-grey: #E2E2E2;
+// Fonts
+$font-title: 'Shrikhand', serif;
+$font-text: 'Roboto', sans-serif;
+$font-size-title: 1.75rem;
+$font-size-subtitle: 1.5rem;
+$font-size-big: 1.125rem;
+$font-size-normal: 1rem;
+$font-size-small: 0.94rem;
+
+/* **************************** */
+/*     Réinit. + Réglages       */
+/* **************************** */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: $font-text;
+}
+
+/* **************************** */
+/*         Génériques           */
+/* **************************** */
+.opacity__0{
+    opacity: 0;
+}
+
+/* **************************** */
+/*       Contenu mobile         */
+/* **************************** */
+.header{
+    height: 113px;
+    &__container__top{
+        display: flex;
+        align-items: center;
+        padding: 0.85rem;
+        &__icon{
+            width: 1.075rem;
+            height: 1rem;
+            padding: 0.438rem;
+            color: $color-grey;
+        }
+        &__logo{
+            width: 12.313rem;
+            height: 2.25rem;
+            margin: auto;
+        }
+    }
+
+    &__container__middle{
+        height: 3.125rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.063rem;
+        background-color: $color-light-grey;
+        color: $color-grey;
+    }
+}
+
+    
