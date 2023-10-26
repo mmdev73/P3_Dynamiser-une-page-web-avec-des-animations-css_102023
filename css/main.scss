@@ -127,11 +127,13 @@ body{
 
 .section__container__fonctionnement{
     background-color: $color-white;
+    display: flex;
+    flex-flow: column;
+    padding-top: 1.688rem;
 }
 
 .fonctionnement__card{
     height: 4.524rem;
-    width: 20.938rem;
     background-color: $bg-color-light-grey;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -157,4 +159,45 @@ body{
 
 .fonctionnement__card__icon--purple{
     color: $primary-color;
+}
+
+.card{
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    background-color: #fff;
+    overflow: hidden;
+    &__container{
+        border-radius: 15px;
+        position: relative;        
+    }
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        &--note{
+            position: absolute;
+            clip:rect(20px, 20px, 20px, 20px); // See what to do
+        }
+    }
+    &__content{
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__grouptitle{
+            &__title{
+                font-size: $font-size-18;
+                font-weight: 700;
+            }
+            &__subtitle{
+                font-size: $font-size-17;
+                font-weight: 300;
+            }
+        }
+        &__like{
+            &__icon{
+                background-color: #008766;
+            }
+        }
+    }
 }
