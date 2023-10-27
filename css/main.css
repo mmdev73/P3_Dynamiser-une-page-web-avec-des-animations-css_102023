@@ -116,10 +116,11 @@ h1 {
 }
 
 .section__container__fonctionnement {
-  background-color: #F3F3F3;
+  background-color: #FFF;
   display: flex;
   flex-flow: column;
   padding-top: 1.688rem;
+  padding-bottom: 1.688rem;
 }
 
 .fonctionnement__card {
