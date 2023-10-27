@@ -150,12 +150,15 @@ h1{
 
 .fonctionnement__card{
     height: 4.524rem;
+    width: calc(100% - 10px);
     background-color: $bg-color-light-grey;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border-radius: 1.25rem;
+    position: relative;
+    z-index: 1;
     &__number{
         height: 1.5rem;
         width: 1.5rem;
@@ -163,18 +166,20 @@ h1{
         color: $color-white;
         border-radius: 50%;
         text-align: center;
+        position: absolute;
+        left: -10px;
+        z-index: 2;
     }
     &__icon{
         color: $icon-grey;
         font-size:1.125rem;
     }
+    &__icon--purple{
+        color: $primary-color;
+    }
     &__text{
         font-weight: 500;
     }
-}
-
-.fonctionnement__card__icon--purple{
-    color: $primary-color;
 }
 
 .card{
@@ -213,10 +218,16 @@ h1{
                 font-weight: 300;
             }
         }
-        &__like{
-            &__icon{
-                background-color: #008766;
-            }
+        &__icon:hover:before{
+            content:"\f004";
+            font-weight: 900;
+            transition: 400ms;
+            background-image: linear-gradient(180deg, $primary-color, $secondary-color);
+            background-size: 100%;
+            background-repeat: repeat;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
 }
