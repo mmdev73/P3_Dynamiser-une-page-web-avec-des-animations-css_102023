@@ -22,8 +22,23 @@ body {
 /* **************************** */
 /*         Génériques           */
 /* **************************** */
+h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .opacity__0 {
   opacity: 0;
+}
+
+.margin-right-10 {
+  margin-right: 0.625rem;
+}
+
+.margin-right-16 {
+  margin-right: 1rem;
 }
 
 .section {
@@ -172,4 +187,28 @@ body {
 }
 .card__content__like__icon {
   background-color: #008766;
+}
+
+.footer {
+  color: #F3F3F3;
+  background-color: #353535;
+  padding: 22px 25px 22px 25px;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+.footer__list {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+}
+.footer__list__item {
+  display: block;
+  width: 20px;
+  height: 16px;
+}
+.footer__list__item__link {
+  color: inherit;
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
