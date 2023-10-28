@@ -1,32 +1,4 @@
-/* **************************** */
-/*          Imports             */
-/* **************************** */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-
-/* **************************** */
-/*          Variables           */
-/* **************************** */
-// Couleurs
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$third-color: #99E2D0;
-$color-white: #F3F3F3;
-$color-green-font: #008766;
-$color-blue: #89C8FA;
-$color-dark-blue: #003A68;
-$color-grey: #353535;
-$color-light-grey: #E2E2E2;
-$bg-color-light-grey: #F6F6F6;
-$icon-grey: #7E7E7E;
-// Fonts
-$font-title: 'Shrikhand', serif;
-$font-text: 'Roboto', sans-serif;
-$font-size-28: 1.75rem; // 28px
-$font-size-24: 1.5rem; // 24px
-$font-size-18: 1.125rem; // 18px
-$font-size-17: 1.063rem; // 17px
-$font-size-16: 1rem; // 16px
-$font-size-15: 0.938rem; //15px
+@import 'vars';
 
 /* **************************** */
 /*     Réinit. + balise         */
@@ -233,6 +205,7 @@ h1{
 }
 
 .footer{
+    z-index: 100;
     color: $color-white;
     background-color: $color-grey;
     padding: 22px 25px 22px 25px;
@@ -255,3 +228,5 @@ h1{
         }
     }
 }
+
+@import 'restaurants';

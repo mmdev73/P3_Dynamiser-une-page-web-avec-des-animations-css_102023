@@ -4,9 +4,6 @@
 /* **************************** */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 /* **************************** */
-/*          Variables           */
-/* **************************** */
-/* **************************** */
 /*     Réinit. + balise         */
 /* **************************** */
 * {
@@ -206,6 +203,7 @@ h1 {
 }
 
 .footer {
+  z-index: 100;
   color: #F3F3F3;
   background-color: #353535;
   padding: 22px 25px 22px 25px;
@@ -227,4 +225,94 @@ h1 {
 .footer__list__item__link {
   color: inherit;
   text-decoration: none;
+}
+
+.section__container__menu__container {
+  width: 100%;
+  position: relative;
+}
+.section__container__menu__container__img {
+  width: 100%;
+  height: 275px;
+}
+
+.cardmenu {
+  width: calc(100% - 24px);
+  border-radius: 30px 30px 0 0;
+  padding: 10px 12px 10px 12px;
+  position: absolute;
+  top: 280px;
+  display: flex;
+  flex-flow: column;
+  gap: 40px;
+  background-color: #F6F6F6;
+}
+.cardmenu__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+  border-radius: 30px 30px 0 0;
+}
+.cardmenu__header__title {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.cardmenu__type {
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+}
+.cardmenu__type__border {
+  width: 40px;
+  border-bottom: 3px #99E2D0 solid;
+}
+.cardmenu__type__tag {
+  height: 69px;
+  background-color: #FFF;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.cardmenu__type__tag__content {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.cardmenu__type__tag__content__head {
+  background-color: aqua;
+}
+.cardmenu__type__tag__content__head__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.cardmenu__type__tag__content__head__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+}
+.cardmenu__type__tag__content__price {
+  display: flex;
+  align-items: flex-end;
+}
+.cardmenu__type__tag__like {
+  margin-right: -50px;
+}
+.cardmenu__type__tag:hover > .cardmenu__type__tag__like {
+  height: 100%;
+  width: 59px;
+  color: #F3F3F3;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-right: 0;
+  transition: 400ms;
 }/*# sourceMappingURL=main.css.map */
