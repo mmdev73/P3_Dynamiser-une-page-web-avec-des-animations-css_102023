@@ -227,9 +227,25 @@ h1 {
   text-decoration: none;
 }
 
+@keyframes checkmenu {
+  0% {
+    margin-right: -50px;
+  }
+  20% {
+    margin-right: -30px;
+  }
+  40% {
+    margin-right: -20px;
+  }
+  90% {
+    margin-right: -5px;
+  }
+  100% {
+    margin-right: 0px;
+  }
+}
 .section__container__menu__container {
   width: 100%;
-  position: relative;
 }
 .section__container__menu__container__img {
   width: 100%;
@@ -272,18 +288,20 @@ h1 {
   height: 69px;
   background-color: #FFF;
   display: inline-flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
   gap: 12px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
 }
 .cardmenu__type__tag__content {
   width: 80%;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   padding: 15px;
+  overflow: hidden;
 }
 .cardmenu__type__tag__content__head {
   background-color: aqua;
@@ -291,10 +309,14 @@ h1 {
 .cardmenu__type__tag__content__head__title {
   font-size: 18px;
   font-weight: 500;
+  overflow: ellipsis;
+  white-space: nowrap;
 }
 .cardmenu__type__tag__content__head__subtitle {
   font-size: 15px;
   font-weight: 300;
+  overflow: ellipsis;
+  white-space: nowrap;
 }
 .cardmenu__type__tag__content__price {
   display: flex;
@@ -313,6 +335,6 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  margin-right: 0;
-  transition: 400ms;
+  animation: checkmenu 250ms;
+  animation-fill-mode: forwards;
 }/*# sourceMappingURL=main.css.map */
