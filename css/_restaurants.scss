@@ -1,0 +1,118 @@
+@keyframes checkmenu {
+    0%{
+        margin-right: -50px;
+    }
+    20%{
+        margin-right: -30px;
+    }
+    40%{
+        margin-right: -20px;
+    }
+    90%{
+        margin-right: -5px;
+    }
+    100%{
+        margin-right: 0px;
+    }
+}
+
+.section__container__menu{
+    &__container{
+        width: 100%;
+        //position: relative;
+        &__img{
+            width: 100%;
+            height: 275px;
+        }
+    }    
+}
+.cardmenu{
+    width: calc(100% - 24px);
+    border-radius: 30px 30px 0 0;
+    padding: 10px 12px 10px 12px;
+    position: absolute;
+    top: 280px;
+    display:flex;
+    flex-flow: column;
+    gap: 40px;
+    background-color: $bg-color-light-grey;  
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        font-size: $font-size-18;        
+        border-radius: 30px 30px 0 0;
+        &__title{
+            font-family: $font-title;
+            font-weight: 400;
+            font-style: italic;
+        }        
+    }
+    &__type{
+        display: flex;
+        flex-flow: column;
+        gap: 8px;
+        &__border{
+            width: 40px;
+            border-bottom: 3px $third-color solid;
+        }
+        &__tag{
+            height: 69px;
+            background-color: #FFF;
+            display: inline-flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 12px;     
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            &__content{
+                width: 90%;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                padding: 15px;
+                overflow:hidden;
+                &__head{                    
+                    background-color: aqua; 
+                    overflow: ellipsis;
+                    white-space: nowrap;            
+                    &__title{
+                        font-size: 18px;
+                        font-weight:500;
+                        overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    &__subtitle{
+                        font-size: 15px;
+                        font-weight:300;
+                        overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+                &__price{
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+            }
+            &__like{
+                margin-right: -50px;  
+            }
+        }
+        &__tag:hover > &__tag__like{
+            height: 100%;
+            width: 59px;
+            color: $color-white;
+            background-color: $third-color;
+            border-radius: 0 15px 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            animation: checkmenu 250ms;
+            animation-fill-mode: forwards;
+        }      
+    }
+}
