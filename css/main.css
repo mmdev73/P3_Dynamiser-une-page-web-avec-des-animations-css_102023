@@ -203,7 +203,6 @@ h1 {
 }
 
 .footer {
-  z-index: 100;
   color: #F3F3F3;
   background-color: #353535;
   padding: 22px 25px 22px 25px;
@@ -294,9 +293,10 @@ h1 {
   gap: 12px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 .cardmenu__type__tag__content {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -305,6 +305,8 @@ h1 {
 }
 .cardmenu__type__tag__content__head {
   background-color: aqua;
+  overflow: ellipsis;
+  white-space: nowrap;
 }
 .cardmenu__type__tag__content__head__title {
   font-size: 18px;
@@ -321,6 +323,7 @@ h1 {
 .cardmenu__type__tag__content__price {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 .cardmenu__type__tag__like {
   margin-right: -50px;
