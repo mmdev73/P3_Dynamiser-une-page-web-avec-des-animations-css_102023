@@ -1,0 +1,91 @@
+@media (width >= 768px){
+    /* Accueil */
+    .fonctionnement__card__container{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .fonctionnement__card{
+        width: calc(33% - 10px);
+    }
+
+    .container__cards{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .card{
+        width: calc(50% - 1.25rem);
+    }
+
+    .footer{
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 12px;
+        &__list{
+            display: flex;
+            flex-flow: row;            
+        }
+    }
+    /*  Restaurants  */
+    .section__container__menu{
+        &__container{
+            &__img{
+                height: 350px;
+            }
+        }    
+    }
+    .cardmenu{ 
+        &__header{
+            position: absolute;
+            top: 355px;     
+        }
+    }
+}
+/* desktop */
+@media (width >= 1024px){
+    .section__container__menu{
+        background-color: #FFF;
+        &__container{
+            &__img{
+                transform: scale(1);
+                object-fit: cover;
+            }
+        }
+    }
+    .cardmenu{
+        width: 80%;
+        margin: auto;
+        border-radius: 0;
+        overflow: hidden;
+        &__header{
+            width: calc(80% - 24px);
+        }
+    }
+}
+
+/* Large desktop */
+
+@media (width > 1440px){
+    body{
+        width: 1440px;
+        margin: auto;
+        background-color: #FFF;
+    }
+    .cardmenu{
+        width: 1152px;
+        margin: auto;
+        border-radius: 0;
+        overflow: hidden;
+        &__header{
+            width: calc(1152px - 24px);
+        }
+    }
+}
