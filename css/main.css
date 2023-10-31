@@ -12,7 +12,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-body {
+.main {
   background-color: #F6F6F6;
 }
 
@@ -139,7 +139,7 @@ h1 {
   margin-right: 1rem;
 }
 
-.section {
+.section, .container__cards {
   display: flex;
   flex-flow: column;
   gap: 1.688rem;
@@ -202,6 +202,7 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 1.688rem;
+  margin: 40px 0;
 }
 .section__container__cta__hook {
   width: 70%;
@@ -219,6 +220,12 @@ h1 {
   flex-flow: column;
   padding-top: 1.688rem;
   padding-bottom: 1.688rem;
+}
+
+.fonctionnement__card__container {
+  display: flex;
+  flex-flow: column;
+  gap: 40px;
 }
 
 .fonctionnement__card {
@@ -256,6 +263,10 @@ h1 {
 }
 
 .card {
+  width: calc(100% - 10px);
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
   border-radius: 15px;
   text-decoration: none;
   color: inherit;
@@ -275,6 +286,7 @@ h1 {
 .card__box__img {
   width: 100%;
   height: 100%;
+  border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -363,6 +375,13 @@ h1 {
     transform: translateX(0%);
   }
 }
+.section__container__menu {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+}
 .section__container__menu__container {
   width: 100%;
   position: relative;
@@ -373,11 +392,13 @@ h1 {
 }
 
 .cardmenu {
+  width: 100%;
   border-radius: 30px 30px 0 0;
   display: flex;
   flex-flow: column;
   gap: 40px;
   padding-bottom: 20px;
+  margin-bottom: 40px;
   background-color: #F6F6F6;
 }
 .cardmenu__header {
@@ -403,6 +424,7 @@ h1 {
   gap: 8px;
   padding-left: 12px;
   padding-right: 12px;
+  margin-top: 10px;
 }
 .cardmenu__type__border {
   width: 40px;
@@ -496,4 +518,83 @@ h1 {
 .cardmenu__btn {
   width: 40%;
   margin: auto;
+}
+
+@media (width >= 768px) {
+  /* Accueil */
+  .fonctionnement__card__container {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .fonctionnement__card {
+    width: calc(33% - 10px);
+  }
+  .container__cards {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .card {
+    width: calc(50% - 1.25rem);
+  }
+  .footer {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 12px;
+  }
+  .footer__list {
+    display: flex;
+    flex-flow: row;
+  }
+  /*  Restaurants  */
+  .section__container__menu__container__img {
+    height: 350px;
+  }
+  .cardmenu__header {
+    position: absolute;
+    top: 355px;
+  }
+}
+/* desktop */
+@media (width >= 1024px) {
+  .section__container__menu {
+    background-color: #FFF;
+  }
+  .section__container__menu__container__img {
+    transform: scale(1);
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .cardmenu {
+    width: 80%;
+    margin: auto;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .cardmenu__header {
+    width: calc(80% - 24px);
+  }
+}
+/* Large desktop */
+@media (width > 1440px) {
+  body {
+    width: 1440px;
+    margin: auto;
+    background-color: #FFF;
+  }
+  .cardmenu {
+    width: 1152px;
+    margin: auto;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .cardmenu__header {
+    width: 1128px;
+  }
 }/*# sourceMappingURL=main.css.map */
