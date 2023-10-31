@@ -112,22 +112,19 @@
                 flex-wrap: nowrap;
                 justify-content: space-between;
                 padding: 15px;
-                overflow: hidden;
+                overflow:hidden;
                 &__head{                    
                     background-color: aqua; 
+                    overflow: hidden;
                     text-overflow: ellipsis;
-                    white-space: nowrap;            
+                    white-space: nowrap;           
                     &__title{
                         font-size: 18px;
                         font-weight:500;
-                        overflow: ellipsis;
-                        white-space: nowrap;
                     }
                     &__subtitle{
                         font-size: 15px;
                         font-weight:300;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
                     }
                 }
                 &__price{
