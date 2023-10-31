@@ -12,6 +12,89 @@
 body{
     background-color: $bg-color-light-grey;
 }
+/* **************************** */
+/*          Loader              */
+/* **************************** */
+@keyframes loader-01{
+    0%{transform: scale(1) rotate(0deg)}
+    50%{transform: scale(0.6) rotate(180deg)}
+    100%{transform: scale(1) rotate(360deg)}
+}
+
+@keyframes loader-02{
+    0%{transform:perspective(4cm) rotateX(45deg)}
+    100%{transform:perspective(5cm) rotateY(180deg)}
+}
+
+@keyframes loader-text{
+    0%{width: 0;}
+    100%{width: 100%;}
+}
+
+@keyframes stop-loader{
+    0%{opacity: 1;}
+    50%{opacity: 0.5}
+    100%{opacity: 0; display: none;}
+}
+.loader_container{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(207, 200, 200, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    animation: 1s ease-out 5s stop-loader forwards;
+}
+.loader{
+    width:80px;
+    height: 80px;
+    display: flex;
+    position: relative;
+    background-color: $primary-color;
+    border-radius: 15px;
+    animation: 2s ease-in-out loader-01 reverse infinite;
+    &::after{
+        content:"";
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        background-color: $secondary-color;
+        border-radius: 15px;
+        animation: 2s ease-in-out loader-02 infinite;
+    }
+    &__text{
+        font-size: $font-size-28;
+        font-family: $font-title;
+        display: inline-block;
+        position: relative;
+        color: $color-grey;
+        text-shadow: 0 0 2px $primary-color, 0 0 1px $secondary-color, 0 0 1px $third-color;
+        letter-spacing: 2px;
+        box-sizing: border-box;
+        
+        &::after{
+            content: 'Chargement';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $primary-color;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: 2s loader-text alternate-reverse infinite;
+        }
+    }
+}
+
 
 /* **************************** */
 /*         Génériques           */
