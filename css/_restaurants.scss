@@ -16,11 +16,25 @@
     }
 }
 
-@keyframes cardmenu-tag-1 {
+@keyframes cardmenu-tag {
     0%{transform: translateX(-200%)}
     100%{transform: translateX(0%)}
 }
 
+//********* Mixin slidein*************************************************************************************
+//Animation d'entrée des plats en slidein depuis la gauche
+//Params :
+//- $nb_elem [optionnal : default -> 10] : Nombre d'éléments qui définit les nom de classe à chaque itération
+//- $delay [optionnal : default -> 0] : valeur de la propriété animation-delay
+//- $unit [optionnal : default -> s] : unité de la valeur précédente
+//*************************************************************************************************************
+@mixin slidein ($nb_elem: 10, $delay: 0, $unit: s){
+    @for $i from 1 to $nb_elem {
+        &--#{$i}{
+            animation: 1s ease-out calc($delay + ($i / 10))+$unit both cardmenu-tag;
+        }
+    }  
+}
 
 .section__container__menu{    
     display: flex;
@@ -37,6 +51,7 @@
         }
     }    
 }
+
 .cardmenu{
     width: 100%;
     border-radius: 30px 30px 0 0;
@@ -84,36 +99,7 @@
             border-radius: 15px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             overflow: hidden;
-            &--1{
-                animation: 1s ease-out 0.2s both cardmenu-tag-1;
-            }
-            &--2{
-                animation: 1s ease-out 0.3s both cardmenu-tag-1;
-            }
-            &--3{
-                animation: 1s ease-out 0.4s both cardmenu-tag-1;
-            }
-            &--3-1{
-                animation: 1s ease-out 0.5s both cardmenu-tag-1;
-            }
-            &--4{
-                animation: 1s ease-out 0.6s both cardmenu-tag-1;
-            }
-            &--5{
-                animation: 1s ease-out 0.7s both cardmenu-tag-1;
-            }
-            &--6{
-                animation: 1s ease-out 0.8s both cardmenu-tag-1;
-            }
-            &--7{
-                animation: 1s ease-out 0.9s both cardmenu-tag-1;
-            }
-            &--8{
-                animation: 1s ease-out 1s both cardmenu-tag-1;
-            }
-            &--9{
-                animation: 1s ease-out 1.1s both cardmenu-tag-1;
-            }
+            @include slidein ();
             &__content{
                 width: 90%;
                 display: flex;
