@@ -246,10 +246,7 @@ h1{
 }
 .container__cards{
     @extend .section;
-}
-
-.section__container{
-    //margin-bottom: 40px;
+    padding-bottom: 40px;    
 }
 
 .card{
