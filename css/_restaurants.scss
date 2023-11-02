@@ -107,18 +107,29 @@
                 justify-content: space-between;
                 padding: 15px;
                 overflow:hidden;
-                &__head{                    
-                    background-color: aqua; 
+                &__head{ 
+                    width: inherit; 
+                    display: flex;
+                    flex-flow: column;
+                    flex-wrap: nowrap;
                     overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;           
+                    white-space: nowrap;
+                    text-overflow: ellipsis;       
                     &__title{
+                        width: inherit;
                         font-size: 18px;
                         font-weight:500;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
                     }
                     &__subtitle{
+                        width: inherit;
                         font-size: 15px;
                         font-weight:300;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
                     }
                 }
                 &__price{
