@@ -35,7 +35,7 @@
 @keyframes stop-loader{
     0%{opacity: 1;}
     50%{opacity: 0.5}
-    100%{opacity: 0; display: none;}
+    100%{opacity: 0; visibility: hidden;}
 }
 .loader_container{
     height: 100%;
@@ -189,6 +189,8 @@ h1{
     &__hook{
         width: 70%;
         text-align: center;
+        font-family: $font-text;
+        font-style: normal;
     }
     &__promess{
         font-size: $font-size-18;

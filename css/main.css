@@ -55,7 +55,7 @@
   }
   100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }
 .loader_container {
@@ -207,6 +207,8 @@ h1 {
 .section__container__cta__hook {
   width: 70%;
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 .section__container__cta__promess {
   font-size: 1.125rem;
@@ -438,6 +440,7 @@ h1 {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: italic;
+  font-size: 1.75rem;
 }
 .cardmenu__type {
   display: flex;
@@ -458,7 +461,6 @@ h1 {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 12px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   overflow: hidden;
@@ -491,7 +493,7 @@ h1 {
   animation: 1s ease-out 0.9s both cardmenu-tag;
 }
 .cardmenu__type__tag__content {
-  width: 90%;
+  width: calc(100% - 30px);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -546,7 +548,7 @@ h1 {
 }
 .cardmenu__btn {
   width: 40%;
-  margin: auto;
+  margin: 30px auto 0 auto;
 }
 
 @media (width >= 768px) {
