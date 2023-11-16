@@ -214,7 +214,8 @@ h1{
 .fonctionnement__card__container{
     display: flex;
     flex-flow: column;
-    gap: 40px;
+    gap: 30px;
+    padding: 0 20px;
 }
 
 .fonctionnement__card{
@@ -268,16 +269,16 @@ h1{
             color: $icon-grey;
             font-size:1.125rem;
             text-align: center;
+            margin-left: 10px;
         }
         &__icon--purple{
             color: $primary-color;
         }
         &__text{
-            font-weight: 500;
-            display: flex;
+            font-weight: 700;
             flex-grow: 1;
             padding-left: 1rem;
-            //overflow: hidden;
+            overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
