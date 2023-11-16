@@ -167,26 +167,22 @@ h1 {
   gap: 1.688rem;
 }
 
-.header__container__top {
+.header {
+  width: 100%;
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
-  padding: 0.85rem;
   background-color: #FFF;
 }
-.header__container__top__icon {
-  width: 1.075rem;
-  height: 1rem;
-  padding: 0.438rem;
-  color: #353535;
+.header__title {
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
 }
-.header__container__top__logo {
-  width: 12.313rem;
-  height: 2.25rem;
-  margin: auto;
-}
-.header__container__middle {
+.header__localite {
   height: 3.125rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,13 +190,13 @@ h1 {
   background-color: #E2E2E2;
   color: #353535;
 }
-.header__container__middle__block__text {
+.header__localite__text {
   background-color: transparent;
   border: none;
   font-size: 1.125rem;
   padding-left: 10px;
 }
-.header__container__middle__block__text:focus {
+.header__localite__text:focus {
   outline: 0;
 }
 
@@ -282,6 +278,29 @@ h1 {
   display: flex;
   flex-grow: 1;
   padding-left: 1rem;
+}
+.fonctionnement__card__box {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  overflow: hidden;
+}
+.fonctionnement__card__box__icon {
+  width: 10%;
+  color: #7E7E7E;
+  font-size: 1.125rem;
+  text-align: center;
+}
+.fonctionnement__card__box__icon--purple {
+  color: #9356DC;
+}
+.fonctionnement__card__box__text {
+  font-weight: 500;
+  display: flex;
+  flex-grow: 1;
+  padding-left: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .section__container__80 {
@@ -405,6 +424,15 @@ h1 {
     transform: translateX(0%);
   }
 }
+.header_restaurant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_restaurant__icon {
+  padding-left: 20px;
+}
+
 .section__container__menu {
   display: flex;
   flex-flow: column;

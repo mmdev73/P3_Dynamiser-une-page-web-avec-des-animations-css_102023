@@ -148,45 +148,36 @@ h1{
 }
 
 .header{
-    &__container__top{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.85rem;
-        background-color: #FFF;
-        &__icon{
-            width: 1.075rem;
-            height: 1rem;
-            padding: 0.438rem;
-            color: $color-grey;
-        }
-        &__logo{
-            width: 12.313rem;
-            height: 2.25rem;
-            margin: auto;
-        }
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    &__title{
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
     }
-
-    &__container__middle{
+    &__localite{
         height: 3.125rem;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1.063rem;
         background-color: $color-light-grey;
         color: $color-grey;
-        &__block{
-            &__text{
-                background-color: transparent;
-                border: none;
-                font-size: $font-size-18;
-                padding-left: 10px;
-            }
-            &__text:focus{
-                outline:0;
-            }
-        }        
-    }
+        &__text{
+            background-color: transparent;
+            border: none;
+            font-size: $font-size-18;
+            padding-left: 10px;
+        }
+        &__text:focus{
+            outline:0;
+        } 
+    }  
 }
 
 .section__container__cta{
@@ -266,6 +257,30 @@ h1{
         display: flex;
         flex-grow: 1;
         padding-left: 1rem;
+    }
+    &__box{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        overflow: hidden;
+        &__icon{
+            width: 10%;
+            color: $icon-grey;
+            font-size:1.125rem;
+            text-align: center;
+        }
+        &__icon--purple{
+            color: $primary-color;
+        }
+        &__text{
+            font-weight: 500;
+            display: flex;
+            flex-grow: 1;
+            padding-left: 1rem;
+            //overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
 }
 
