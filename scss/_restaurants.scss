@@ -35,6 +35,14 @@
         }
     }  
 }
+.header_restaurant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__icon{
+        padding-left: 20px;
+    }
+}
 
 .section__container__menu{    
     display: flex;
