@@ -17,12 +17,14 @@
     <main class="main">
         <header class="header">
             <div class="header__container__top">
-                <i class="fa-solid fa-arrow-left header__container__top__icon opacity__0"></i>
                 <img src="./img/logo/ohmyfood.png" alt="Logo de l'entreprise Ohmyfood" class="header__container__top__logo">
             </div>
             <div class="header__container__middle">
-                <i class="fa-solid fa-location-dot header__container__middle__icon"></i>
-                <p class="header__container__middle__text">Paris, Belleville</p>
+                <div class="header__container__middle__block">
+                    <i class="fa-solid fa-location-dot header__container__middle__block__icon"></i>
+                    <input type="text" class="header__container__middle__block__text" value="Paris, Belleville" id="sel-city">
+                    <label hidden="hidden" for="sel-city">Sélectionnez la ville souhaitée :</label>
+                </div>                
             </div>
         </header>
         <div class="section section__container__cta">

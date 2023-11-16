@@ -127,10 +127,6 @@ h1 {
   font-style: italic;
 }
 
-.opacity__0 {
-  opacity: 0;
-}
-
 .margin-right-10 {
   margin-right: 0.625rem;
 }
@@ -174,6 +170,7 @@ h1 {
 .header__container__top {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0.85rem;
   background-color: #FFF;
 }
@@ -197,6 +194,15 @@ h1 {
   background-color: #E2E2E2;
   color: #353535;
 }
+.header__container__middle__block__text {
+  background-color: transparent;
+  border: none;
+  font-size: 1.125rem;
+  padding-left: 10px;
+}
+.header__container__middle__block__text:focus {
+  outline: 0;
+}
 
 .section__container__cta {
   justify-content: center;
@@ -209,6 +215,8 @@ h1 {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
 }
 .section__container__cta__promess {
   font-size: 1.125rem;
@@ -551,6 +559,7 @@ h1 {
   margin: 30px auto 0 auto;
 }
 
+/*   Tablet    */
 @media (width >= 768px) {
   /* Accueil */
   .fonctionnement__card__container {
