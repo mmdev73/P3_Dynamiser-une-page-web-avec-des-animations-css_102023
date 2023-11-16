@@ -107,10 +107,6 @@ h1{
     font-style: italic;
 }
 
-.opacity__0{
-    opacity: 0;
-}
-
 .margin-right-10{
     margin-right: 0.625rem;
 }
@@ -155,6 +151,7 @@ h1{
     &__container__top{
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 0.85rem;
         background-color: #FFF;
         &__icon{
@@ -178,6 +175,17 @@ h1{
         gap: 1.063rem;
         background-color: $color-light-grey;
         color: $color-grey;
+        &__block{
+            &__text{
+                background-color: transparent;
+                border: none;
+                font-size: $font-size-18;
+                padding-left: 10px;
+            }
+            &__text:focus{
+                outline:0;
+            }
+        }        
     }
 }
 
@@ -191,6 +199,8 @@ h1{
         text-align: center;
         font-family: $font-text;
         font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
     }
     &__promess{
         font-size: $font-size-18;
